@@ -89,6 +89,7 @@ function onClickByList({ target }) {
       }
       cancelButton.setAttribute("data-id-si", idST);
     }, 1000);
+    return
   }
 
   if (target.dataset.action === "cancelButton") {
@@ -102,6 +103,7 @@ function onClickByList({ target }) {
     parentLi.classList.remove("itemRemove");
     removeButton.classList.remove("hiddenButton");
     cancelButton.classList.add("hiddenButton");
+    return
   }
 
   if (target.dataset.action === "changeStatus") {
