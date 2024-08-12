@@ -55,10 +55,10 @@ function onSubmit(event) {
   const { value } = input;
   const currentTodo = dataList.addTodo(value);
 
-  if (!value) {
-    return
+  if (!value.trim()) {
+    return;
   }
-const markupTodoItem = templateTodoItem(currentTodo);
+  const markupTodoItem = templateTodoItem(currentTodo);
   refs.list.insertAdjacentHTML("beforeend", markupTodoItem);
   localStorage.setItem("list", JSON.stringify(dataList.todoList));
   form.reset();
@@ -91,7 +91,7 @@ function onClickByList({ target }) {
       }
       cancelButton.setAttribute("data-id-si", idST);
     }, 1000);
-    return
+    return;
   }
 
   if (target.dataset.action === "cancelButton") {
@@ -105,7 +105,7 @@ function onClickByList({ target }) {
     parentLi.classList.remove("itemRemove");
     removeButton.classList.remove("hiddenButton");
     cancelButton.classList.add("hiddenButton");
-    return
+    return;
   }
 
   if (target.dataset.action === "changeStatus") {
