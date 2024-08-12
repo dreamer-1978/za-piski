@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+body {
+    box-sizing: border-box;
+    /* background-color: #6667ff; */
+    background: url('/images/forest.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* opacity: 95%; */
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.containerTodo {
+    width: 500px;
+    background-color: rgba(128, 128, 128, 0.669);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 4px;
+    border: 2px solid #ffd700
+}
+
+.mainTitle {
+    color: transparent;
+    background-image: linear-gradient(to bottom, black, white, gray);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+}
+
+.formTodo {
+    display: flex;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(246, 243, 243, 0.2);
+}
+
+.formTodo input {
+    background-color: hsla(0, 6%, 80%, 0.72);
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    height: 40px;
+    font-size: 16px;
+    flex-grow: 1;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.formTodo input:focus {
+    background-color: hsla(0, 33%, 98%, 0.936);
+}
+.formTodo button {
+    font-size: 30px;
+    background-color: hsla(240, 100%, 50%, 0.481);
+    color: white;
+    padding: 2px 15px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.item {
+    display: flex;
+    font-size: 20px;
+    font-weight: lighter;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 6px;
+    min-height: 44px;
+    border-bottom: 1px solid #adff2f;
+}
+
+.itemRemove {
+    background-color: rgba(128, 128, 128, 0.702);
+    border-radius: 5px;
+}
+
+.taskItem {
+    position: relative;
+    margin-right: 10px;
+    padding-left: 16px;
+    cursor: pointer;
+    flex-grow: 1;
+    color: #fff2aa;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.taskItem::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.taskDown {
+    text-decoration: line-through;
+    color: rgb(67, 66, 66);
+}
+.taskDown::before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.deleteIcon {
+    width: 31;
+    height: 31px;
+    fill: hsla(0, 100%, 50%, 0.811);
+    transition: border 0.3s ease-in-out;
+}
+.deleteIcon:hover {
+    font-weight: lighter;
+    fill: red;
+    width: 35;
+    height: 35px;
+}
+.buttonRemove {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border 0.3s ease-in-out;
+}
+
+.buttonRemove:hover{
+    border: 1.6px solid red;
+    background-color: rgba(255, 0, 0, 0.086);
+}
+
+.buttonRemove img {
+    pointer-events: none;
+}
+.buttonCancel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid red;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.hiddenButton {
+    display: none;
+}
