@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@font-face {
+    font-family: 'Rosarium';
+    src: url('/fonts/ofont.ru_Rosarium.ttf')
+}
 body {
     box-sizing: border-box;
     /* background-color: #6667ff; */
@@ -6,6 +10,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+
     /* opacity: 95%; */
 }
 
@@ -88,9 +94,11 @@ body {
     padding-left: 16px;
     cursor: pointer;
     flex-grow: 1;
-    color: #fff2aa;
+    color: #FFC5C5;
     font-weight: 600;
     letter-spacing: 0.5px;
+    font-family: 'Rosarium', cursive;
+    font-size: 26px;
 }
 
 .taskItem::after{
