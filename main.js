@@ -53,11 +53,9 @@ function onSubmit(event) {
   const form = event.currentTarget;
   const input = form.elements.taskTodo;
   const { value } = input;
-  const currentTodo = dataList.addTodo(value);
+  const valueTrim = value.trim()
+  const currentTodo = dataList.addTodo(valueTrim);
 
-  if (!value.trim()) {
-    return;
-  }
   const markupTodoItem = templateTodoItem(currentTodo);
   refs.list.insertAdjacentHTML("beforeend", markupTodoItem);
   localStorage.setItem("list", JSON.stringify(dataList.todoList));
