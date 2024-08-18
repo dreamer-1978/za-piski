@@ -9,8 +9,6 @@ const refs = {
 refs.formTodo.addEventListener("submit", onSubmit);
 refs.list.addEventListener("click", onClickByList);
 
-//   todoList: [],
-
 //   initTodo(list) {
 //     this.todoList = list;
 //   },
@@ -53,7 +51,10 @@ function onSubmit(event) {
   const form = event.currentTarget;
   const input = form.elements.taskTodo;
   const { value } = input;
-  const valueTrim = value.trim()
+  if (!value.trim()) {
+    return;
+  }
+  const valueTrim = value.trim();
   const currentTodo = dataList.addTodo(valueTrim);
 
   const markupTodoItem = templateTodoItem(currentTodo);
